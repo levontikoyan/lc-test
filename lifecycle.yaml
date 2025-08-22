@@ -6,7 +6,7 @@ environment:
     # - name: 'lc-test-helm-local'
     - name: 'nginx'
     # - name: 'postgres-db'
-    # - name: 'grpc-echo'
+    - name: 'grpc-echo'
     # - name: 'redis'
     # - name: 'jenkins'
     # - name: 'lc-test-helm-oci'
@@ -83,11 +83,11 @@ services:
             - 8080  
   
   - name: "grpc-echo"
-    deploymentDependsOn:
-      - 'lc-test-gh-type'
+    # deploymentDependsOn:
+    #   - 'lc-test-gh-type'
     helm:
       version: "3.12.0"
-      repository: "vmelikyan/lc-test"
+      repository: "levontikoyan/lc-test"
       branchName: "main"
       envMapping:
         app:
