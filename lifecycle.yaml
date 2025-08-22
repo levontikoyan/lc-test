@@ -17,7 +17,7 @@ services:
   - name: 'lc-test-helm-local'
     helm:
       version: "3.12.0"
-      repository: 'vmelikyan/lc-test'
+      repository: 'levontikoyan/lc-test'
       branchName: 'main'
       args: "--debug"
       envMapping:
@@ -50,7 +50,7 @@ services:
   - name: 'lc-test-helm-oci'
     helm:
       version: "3.12.0"
-      repository: 'vmelikyan/lc-test'
+      repository: 'levontikoyan/lc-test'
       branchName: 'main'
       args: "--debug"
       envMapping:
@@ -116,7 +116,7 @@ services:
     deploymentDependsOn:
       - 'redis'
     github:
-      repository: 'vmelikyan/lc-test'
+      repository: 'levontikoyan/lc-test'
       branchName: 'main'
       docker:
         builder:
