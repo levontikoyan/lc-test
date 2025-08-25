@@ -87,7 +87,7 @@ services:
       - 'lc-test-gh-type'
     helm:
       version: "3.12.0"
-      repository: "vmelikyan/lc-test"
+      repository: "levontikoyan/lc-test"
       branchName: "main"
       envMapping:
         app:
@@ -174,7 +174,7 @@ services:
 
   - name: "postgres-db"
     helm:
-      repository: "vmelikyan/lc-test"
+      repository: "levontikoyan/lc-test"
       branchName: "main"
       chart:
         name: "postgresql"
@@ -185,14 +185,14 @@ services:
     deploymentDependsOn:
       - 'postgres-db'
     helm:
-      repository: "vmelikyan/lc-test"
+      repository: "levontikoyan/lc-test"
       branchName: "main"
       chart:
         name: "redis"
 
   - name: "jenkins"
     helm:
-      repository: "vmelikyan/lc-test"
+      repository: "levontikoyan/lc-test"
       branchName: "main"
       chart:
         name: "jenkins"
